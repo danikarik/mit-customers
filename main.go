@@ -28,7 +28,7 @@ func main() {
 		if i == 0 {
 			continue
 		}
-		name := clean(row.Cells[1].String())
+		name := clean(row.Cells[2].String())
 		addr := clean(row.Cells[5].String())
 		cbin := clean(row.Cells[8].String())
 		data := fmt.Sprintf("(%d,'%s',3,'%s','%s','','',NOW(),NOW())", i, name, addr, cbin)
