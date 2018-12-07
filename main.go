@@ -14,6 +14,7 @@ func main() {
 	excelFileName := "./data/customers.xlsx"
 	xlFile, err := xlsx.OpenFile(excelFileName)
 	check(err)
+	defer xlFile.Close()
 
 	sqlFileName := "./data/customers.sql"
 	file, err := os.Create(sqlFileName)
